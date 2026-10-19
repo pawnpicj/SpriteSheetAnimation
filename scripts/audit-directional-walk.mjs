@@ -1,0 +1,30 @@
+import { chromium } from '@playwright/test';
+import { writeFile } from 'node:fs/promises';
+const browser = await chromium.launch({channel:'msedge',headless:true});
+const page = await browser.newPage({viewport:{width:1440,height:1000}});
+const results=[];
+try {
+ await page.goto('http://127.0.0.1:5186/?v=3');
+ await page.locator('input[type=file][accept=".json"]').setInputFiles('output/Slime-generated.sprite.json');
+ await page.getByRole('button',{name:'Test Play',exact:true}).waitFor({state:'visible'});
+ await page.getByRole('button',{name:'Test Play',exact:true}).click();
+ const actor=page.locator('canvas[aria-label="Keyboard walk and attack test"]');
+ await actor.waitFor();
+ await page.waitForTimeout(200);
+ results.push({step:'idle',state:await actor.evaluate(c=>({...c.dataset}))});
+ await page.screenshot({path:'qa/walk-audit-01-idle.png',fullPage:true});
+ await actor.focus();
+ await page.keyboard.down('w');
+ await page.waitForTimeout(240);
+ results.push({step:'up',state:await actor.evaluate(c=>({...c.dataset}))});
+ await page.screenshot({path:'qa/walk-audit-02-up.png',fullPage:true});
+ await page.keyboard.up('w');
+ await page.waitForTimeout(100);
+ await page.keyboard.down('s');
+ await page.waitForTimeout(240);
+ results.push({step:'down',state:await actor.evaluate(c=>({...c.dataset}))});
+ await page.screenshot({path:'qa/walk-audit-03-down.png',fullPage:true});
+ await page.keyboard.up('s');
+ await writeFile('qa/walk-audit-results.json',JSON.stringify(results,null,2));
+ console.log(JSON.stringify(results));
+} finally {await browser.close();}

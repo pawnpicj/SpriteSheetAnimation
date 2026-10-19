@@ -1,0 +1,229 @@
+.dialog:has(.monster-analysis) {
+  width: 680px;
+}
+.analysis-launch {
+  margin-top: 17px;
+  width: 100%;
+  padding: 10px 8px;
+  font-size: 11px;
+  color: #c9e9ac;
+  background: #263221;
+  border-color: #4e6339;
+}
+.analysis-source {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 15px 0;
+}
+.analysis-source > .checker {
+  width: 85px;
+  height: 85px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+.analysis-source img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+.analysis-source strong {
+  font-size: 12px;
+}
+.analysis-source p {
+  font-size: 10px;
+  color: #90a5b2;
+  line-height: 1.9;
+  margin-top: 5px;
+}
+.analysis-provider {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #a7cb85;
+  font-size: 10px;
+  line-height: 1.7;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+.analysis-provider svg {
+  flex-shrink: 0;
+}
+.analysis-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 11px;
+  color: #becdd5;
+  margin: 14px 0;
+}
+.analysis-label textarea,
+.monster-analysis details textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+.monster-analysis input,
+.monster-analysis textarea,
+.monster-analysis select {
+  font: inherit;
+  background: #131e25;
+  border: 1px solid #3b4b57;
+  color: #e0e8ec;
+  border-radius: 6px;
+  padding: 9px 11px;
+  max-width: 100%;
+}
+.monster-analysis textarea {
+  font-size: 12px;
+  line-height: 1.8;
+  width: 100%;
+}
+.analysis-disclosure {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 10px;
+  line-height: 1.9;
+  color: #9aadb8;
+  margin-top: 10px;
+}
+.analysis-disclosure svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.analysis-error {
+  font-size: 12px;
+  color: #ffd1b3;
+  background: #41271d;
+  border-radius: 6px;
+  padding: 12px;
+  line-height: 1.8;
+  margin-top: 15px;
+}
+.analysis-pending {
+  padding: 14px 0;
+  font-size: 11px;
+  color: var(--lime);
+  line-height: 1.8;
+}
+.analysis-results {
+  border-top: 1px solid #3a4b58;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+.analysis-result-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.analysis-result-heading span {
+  font-size: 10px;
+  color: #9db48b;
+}
+.analysis-description {
+  font-size: 11px;
+  line-height: 1.9;
+  color: #a2b5c0;
+  margin-top: 10px;
+}
+.anatomy-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: #142027;
+  border: 1px solid #30424e;
+  border-radius: 7px;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 11px;
+  color: #b4c8d3;
+}
+.analysis-results h4 {
+  font-size: 12px;
+  color: #d5e3e9;
+  margin: 22px 0 10px;
+}
+.analysis-results ul,
+.analysis-results ol {
+  padding-left: 22px;
+  font-size: 11px;
+  color: #a8bdca;
+  line-height: 1.9;
+}
+.analysis-results details {
+  margin-top: 15px;
+  color: #a7bbca;
+  border-top: 1px solid #334550;
+  padding-top: 12px;
+  font-size: 11px;
+}
+.analysis-results summary {
+  cursor: pointer;
+}
+.analysis-attack {
+  padding: 0 13px 13px;
+  border: 1px solid #354955;
+  border-radius: 8px;
+  margin: 13px 0;
+  background: #17232b;
+}
+.analysis-attack p {
+  font-size: 11px;
+  color: #adbec9;
+  line-height: 1.9;
+  margin: 7px 0;
+}
+.analysis-attack b {
+  color: #d5e0e6;
+  font-weight: 500;
+}
+.analysis-attack .setting-row {
+  margin-top: 12px;
+}
+.analysis-uncertain {
+  color: #d5bc90 !important;
+}
+.analysis-results details textarea {
+  margin-top: 12px;
+}
+.asset-group .analysis-saved {
+  font-size: 9px;
+  color: #b6d68a;
+  line-height: 1.7;
+  margin-top: 9px;
+}
+@media (max-width: 650px) {
+  .analysis-launch {
+    grid-column: 1/-1;
+    margin: 0;
+  }
+  .analysis-source {
+    gap: 10px;
+  }
+  .analysis-source strong {
+    font-size: 11px;
+  }
+  .analysis-source > .checker {
+    width: 66px;
+    height: 66px;
+  }
+  .analysis-source img {
+    width: 60px;
+    height: 60px;
+  }
+  .analysis-provider {
+    font-size: 9px;
+    overflow-wrap: anywhere;
+  }
+  .anatomy-facts {
+    grid-template-columns: 1fr;
+  }
+  .analysis-result-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,145 @@
+.dialog:has(.frame-generation) {
+  width: 700px;
+}
+.generation-launch {
+  margin-top: 8px;
+  background: #b5f435;
+  color: #192800;
+  border-color: #b5f435;
+  width: 100%;
+  padding: 10px 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.generation-reference {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 10px 0 15px;
+}
+.generation-reference > .checker {
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  flex-shrink: 0;
+}
+.generation-reference img {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+}
+.generation-reference p {
+  font-size: 10px;
+  color: #94a9b6;
+  line-height: 1.8;
+  margin-top: 6px;
+  overflow-wrap: anywhere;
+}
+.generation-steps {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+}
+.generation-steps > span {
+  flex: 1;
+  padding: 10px 6px;
+  background: #152027;
+  border: 1px solid #354853;
+  border-radius: 6px;
+  font-size: 10px;
+  text-align: center;
+  color: #78909e;
+}
+.generation-steps > span.done {
+  border-color: #738e44;
+  color: #c2e79b;
+}
+.generation-progress {
+  padding: 18px;
+  background: #15231c;
+  border: 1px solid #405936;
+  border-radius: 8px;
+  color: #c6e7ac;
+}
+.generation-progress strong {
+  font-size: 12px;
+}
+.generation-progress p {
+  font-size: 11px;
+  line-height: 1.9;
+  color: #96ad99;
+  margin: 12px 0;
+}
+.generation-progress button {
+  padding: 8px 12px;
+  font-size: 11px;
+}
+.generated-previews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 15px 0;
+}
+.generated-clip {
+  text-align: center;
+}
+.generated-clip > .checker {
+  border: 1px solid #51616d;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.generated-clip canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+.generated-clip strong {
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.generated-clip > span {
+  font-size: 9px;
+  color: #8ea5b4;
+  display: block;
+  margin-top: 5px;
+}
+.generation-success {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #c1e893;
+  font-size: 12px;
+  margin: 18px 0 10px;
+}
+@media (max-width: 650px) {
+  .generation-launch {
+    grid-column: 1/-1;
+    margin: 0;
+  }
+  .generation-reference > .checker {
+    width: 65px;
+    height: 65px;
+  }
+  .generation-reference img {
+    width: 60px;
+    height: 60px;
+  }
+  .generation-reference {
+    gap: 11px;
+  }
+  .generation-steps > span {
+    font-size: 8px;
+    padding: 9px 4px;
+  }
+  .generated-previews {
+    gap: 6px;
+  }
+  .generated-clip strong {
+    font-size: 10px;
+  }
+}

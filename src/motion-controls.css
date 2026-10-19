@@ -1,0 +1,61 @@
+.motion-note {
+  font-size: 10px;
+  color: #9aadb6;
+  line-height: 1.8;
+  margin: 0;
+  padding: 10px;
+  background: #121c23;
+  border: 1px solid #34424b;
+  border-radius: 6px;
+}
+.frame-tile.hit-frame > span {
+  color: #f8cc73;
+}
+.frame-tile.hit-frame > span::after {
+  content: " · HIT";
+  font-size: 8px;
+}
+.frame-tile.hit-frame.selected > span {
+  color: #172304;
+}
+.settings-panel:has(.motion-note) {
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+.settings-panel:has(.motion-note) .settings-fields {
+  gap: 10px;
+}
+.settings-panel:has(.motion-note) .checkboxes {
+  margin-top: 15px;
+  gap: 10px;
+}
+.settings-panel:has(.motion-note) .export-block {
+  padding-top: 17px;
+}
+.settings-panel:has(.motion-note) .export-block p {
+  display: none;
+}
+.settings-panel:has(.motion-note) .text-button {
+  margin-top: 11px;
+}
+.setting-row select[aria-label="Attack type"] {
+  font-size: 11px;
+}
+.action-tabs button:disabled {
+  opacity: 0.35;
+}
+@media (min-width: 1191px) {
+  .settings-panel:has(.motion-note) .setting-row > input,
+  .settings-panel:has(.motion-note) .setting-row > select {
+    padding: 7px 8px;
+  }
+  .settings-panel:has(.motion-note) .section-title {
+    margin-bottom: 14px;
+  }
+  .settings-panel:has(.motion-note) .setting-row {
+    font-size: 11px;
+  }
+  .settings-panel:has(.motion-note) .checkboxes {
+    font-size: 11px;
+  }
+}

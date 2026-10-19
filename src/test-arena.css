@@ -1,0 +1,133 @@
+.test-arena {
+  position: absolute;
+  inset: 0;
+}
+.test-arena > canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline-offset: -3px !important;
+}
+.test-status {
+  position: absolute;
+  left: 14px;
+  top: 42px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  pointer-events: none;
+}
+.test-status > span {
+  background: #142116df;
+  border: 1px solid #779c4666;
+  border-radius: 5px;
+  color: #c8ec94;
+  padding: 5px 9px;
+  font-size: 10px;
+}
+.test-status > strong {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #ffdb8f;
+  background: #35270ee6;
+  padding: 6px 9px;
+  border-radius: 4px;
+}
+.test-key-guide {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  color: #dce6ec;
+  background: #111b22ed;
+  border: 1px solid #596b7866;
+  border-radius: 6px;
+  padding: 9px;
+  pointer-events: none;
+  font-size: 9px;
+}
+.test-key-guide > span {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.test-key-guide kbd {
+  padding: 2px 4px;
+  font-size: 8px;
+  border-bottom-width: 2px;
+}
+.test-play-button {
+  font-size: 11px;
+  padding: 7px 12px;
+  background: #243322;
+  border-color: #596b3c;
+  color: #d5edb9;
+}
+.test-play-button.active {
+  background: var(--lime);
+  color: #172304;
+  border-color: var(--lime);
+}
+.test-playing .transport {
+  visibility: hidden;
+}
+.test-playing .stage-bottom {
+  display: none;
+}
+.test-playing .canvas-meta {
+  z-index: 2;
+}
+.test-playing .preview-stage {
+  cursor: crosshair;
+}
+.test-mode-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--line);
+  margin-top: auto;
+}
+.test-mode-toolbar > span {
+  font-size: 10px;
+  line-height: 1.5;
+  color: #8da3af;
+}
+.test-mode-toolbar .test-play-button {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.test-playing .preview-caption {
+  margin-top: 0;
+}
+@media (max-width: 650px) {
+  .test-key-guide {
+    gap: 9px;
+    padding: 8px 5px;
+    left: 6px;
+    right: 6px;
+    font-size: 8px;
+  }
+  .test-key-guide > span {
+    gap: 2px;
+  }
+  .test-key-guide kbd {
+    font-size: 7px;
+    padding: 2px 3px;
+  }
+  .test-mode-toolbar {
+    padding: 9px 11px;
+    gap: 8px;
+  }
+  .test-mode-toolbar > span {
+    font-size: 9px;
+  }
+  .test-play-button {
+    font-size: 10px;
+    padding: 7px 9px;
+  }
+}
